@@ -1,11 +1,11 @@
 const example = {
   // Home Tab
   Home: "",
-  "Period in": "", // eg. Period in 5 Days
+  "Period Diaryod in": "", // eg. Period Diaryod in 5 Days
   "no info": "",
-  Period: "", // eg. Period today
+  Period Diaryod: "", // eg. Period Diaryod today
   today: "",
-  Delay: "", // mean Period Delay
+  Delay: "", // mean Period Diaryod Delay
   Days: "", // eg. "(0)[Days];(1)[Day];(2-inf)[Days];"
   "Current cycle day": "",
 
@@ -18,35 +18,35 @@ const example = {
   // day_ordinal_two: "{{count}}nd day",
   // day_ordinal_few: "{{count}}rd day",
   // day_ordinal_other: "{{count}}th day",
-  day: "", // eg. Period - 1st day
+  day: "", // eg. Period Diaryod - 1st day
   Ovulation: "",
   possible: "", // eg. Ovulation - possible
   finished: "", // eg. Ovulation - finished
   tomorrow: "", // eg. Ovulation - tomorrow
-  in: "", // eg. Period in 5 Days
+  in: "", // eg. Period Diaryod in 5 Days
   "chance of getting pregnant": "", // eg. High/Low chance of getting pregnant
   High: "",
   Low: "",
-  "Period today": "",
+  "Period Diaryod today": "",
   edit: "",
   save: "",
-  "Period is": "", // eg. Period is possible today
+  "Period Diaryod is": "", // eg. Period Diaryod is possible today
   "possible today": "",
 
   // Details Tab
   Details: "",
-  "Period length": "", // eg. Period length - 5 Days
+  "Period Diaryod length": "", // eg. Period Diaryod length - 5 Days
   "Cycle length": "", // eg. Cycle length - 25 Days
-  "You haven't marked any periods yet": "",
+  "You haven't marked any Period Diaryods yet": "",
 
   // Mark Modal
-  mark: "", // eg. mark your period
+  mark: "", // eg. mark your Period Diaryod
   cancel: "",
 
   // Welcome Modal
-  "Welcome to Peri": "",
-  "Mark the days of your": "", // eg. Mark the days of your last period
-  "last period": "", // eg. Mark the days of your last period
+  "Welcome to Period Diary": "",
+  "Mark the days of your": "", // eg. Mark the days of your last Period Diaryod
+  "last Period Diaryod": "", // eg. Mark the days of your last Period Diaryod
   Continue: "",
   "Forecast will not be generated.": "",
   or: "",
@@ -81,7 +81,7 @@ const example = {
   "characteristic secretions ": "",
 
   "Luteal phase": "",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "",
   "breast tenderness": "",
   puffiness: "",
@@ -108,9 +108,9 @@ const example = {
 
   // Notifications
   Notifications: "",
-  "Period is coming soon": "",
-  "Your period may start tomorrow": "",
-  "Your period may start today": "",
+  "Period Diaryod is coming soon": "",
+  "Your Period Diaryod may start tomorrow": "",
+  "Your Period Diaryod may start today": "",
 
   //Count stored cycles
   "Confirm selection": "",

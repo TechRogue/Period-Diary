@@ -1,9 +1,9 @@
 const hi = {
   // Home Tab
   Home: "मुख पृष्ठ",
-  "Period in": "मासिक धर्म के माध्यम से",
+  "Period Diaryod in": "मासिक धर्म के माध्यम से",
   "no info": "अज्ञात",
-  Period: "मासिक धर्म",
+  Period Diaryod: "मासिक धर्म",
   today: "आज",
   Delay: "रुकावट",
   Days: "(0)[दिन];(1)[दिन];(2-4)[दिन];(5-20)[दिन];(21)[दिन];(22-24)[दिन];(25-30)[दिन];(31)[दिन];(32-34)[दिन];(35-40)[दिन];",
@@ -17,17 +17,17 @@ const hi = {
   "chance of getting pregnant": "गर्भवती होने की संभावना",
   High: "उच्च",
   Low: "निम्न",
-  "Period today": "आज मासिक धर्म",
+  "Period Diaryod today": "आज मासिक धर्म",
   edit: "संपादित करें",
   save: "सहेजें",
-  "Period is": "मासिक धर्म है",
+  "Period Diaryod is": "मासिक धर्म है",
   "possible today": "आज संभव है",
 
   // Details Tab
   Details: "विवरण",
-  "Period length": "मासिक धर्म की अवधि",
+  "Period Diaryod length": "मासिक धर्म की अवधि",
   "Cycle length": "चक्र की अवधि",
-  "You haven't marked any periods yet":
+  "You haven't marked any Period Diaryods yet":
     "आपने अभी तक कोई मासिक धर्म चिह्नित नहीं किया है",
 
   // Mark Modal
@@ -35,9 +35,9 @@ const hi = {
   cancel: "रद्द करें",
 
   // Welcome Modal
-  "Welcome to Peri": "Peri में आपका स्वागत है",
+  "Welcome to Period Diary": "Period Diary में आपका स्वागत है",
   "Mark the days of your": "अपने के दिनों को चिह्नित करें",
-  "last period": "अंतिम मासिक धर्म",
+  "last Period Diaryod": "अंतिम मासिक धर्म",
   Continue: "जारी रखें",
   "Forecast will not be generated.": "पूर्वानुमान उत्पन्न नहीं होगा।",
   or: "या",
@@ -73,7 +73,7 @@ const hi = {
   "chest discomfort and bloating": "छाती में असहजता और सूजन",
 
   "Luteal phase": "ल्यूटियल चरण",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "एस्ट्रोजेन और प्रोजेस्टेरोन हार्मोनों के स्तर पहले बढ़ते हैं और फिर मासिक धर्म से ठीक पहले तेजी से गिर जाते हैं। ल्यूटियल चरण में प्रोजेस्टेरोन अपने उच्चतम स्तर पर पहुंचता है।",
   "breast tenderness": "स्तनों की संवेदनशीलता",
   puffiness: "सूजन",

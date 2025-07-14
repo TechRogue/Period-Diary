@@ -1,9 +1,9 @@
 const fa = {
   // Home Tab
   Home: "خانه",
-  "Period in": "تا پریود بعدی",
+  "Period Diaryod in": "تا پریود بعدی",
   "no info": "بدون اطلاعات",
-  Period: "پریود",
+  Period Diaryod: "پریود",
   today: "امروز",
   Delay: "تاخیر",
   Days: "(0-inf)[روز]",
@@ -17,24 +17,24 @@ const fa = {
   "chance of getting pregnant": "احتمال بارداری",
   High: " بالا است",
   Low: " پایین است",
-  "Period today": "پریودی در امروز",
+  "Period Diaryod today": "پریودی در امروز",
   edit: ".ویرایش",
   save: "ثبت",
-  "Period is": "پریودی",
+  "Period Diaryod is": "پریودی",
   "possible today": "برای امروز ممکن است",
   // Details Tab
   Details: "جزئیات",
-  "Period length": "طول پریود",
+  "Period Diaryod length": "طول پریود",
   "Cycle length": "طول دوره",
-  "You haven't marked any periods yet":
+  "You haven't marked any Period Diaryods yet":
     "شما تا به حال هیچ پریودی را مشخص نکرده اید",
   // Mark Modal
   mark: "علامت زدن",
   cancel: "کنسل",
   // Welcome Modal
-  "Welcome to Peri": "به پری خوش آمدید",
+  "Welcome to Period Diary": "به پری خوش آمدید",
   "Mark the days of your": "روز های آخرین پریودی را",
-  "last period": "مشخص کنید",
+  "last Period Diaryod": "مشخص کنید",
   Continue: "ادامه",
   "Forecast will not be generated.": "پیش بینی انجام نخواهد شد",
   or: "یا",
@@ -69,7 +69,7 @@ const fa = {
   "characteristic secretions": "ترشحات مشخصه",
 
   "Luteal phase": "مرحله لوتئال",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "سطح هورمون های استروژن و پروژسترون ابتدا افزایش می یابد و سپس درست قبل از پریود به شدت کاهش می یابد. پروژسترون در مرحله لوتئال به اوج خود می رسد.",
   "breast tenderness": "حساسیت نوک سینه ها",
   puffiness: "پف کردگی",

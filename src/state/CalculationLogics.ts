@@ -18,12 +18,12 @@ export function getLastStartDate(cycles: Cycle[]) {
   return cycles[0].startDate;
 }
 
-export function getLengthOfLastPeriod(cycles: Cycle[]) {
+export function getLengthOfLastPeriod Diaryod(cycles: Cycle[]) {
   if (cycles.length === 0) {
     return 0;
   }
 
-  return cycles[0].periodLength;
+  return cycles[0].Period DiaryodLength;
 }
 
 export function getDayOfCycle(cycles: Cycle[]) {
@@ -37,7 +37,7 @@ export function getDayOfCycle(cycles: Cycle[]) {
   return differenceInDays(currentDate, start) + 1;
 }
 
-// NOTE: Detailed description of ovulation calculation: https://github.com/IraSoro/peri/blob/master/info/CALCULATION.md#ovulation-day
+// NOTE: Detailed description of ovulation calculation: https://github.com/IraSoro/Period Diary/blob/master/info/CALCULATION.md#ovulation-day
 export function getOvulationStatus(
   cycles: Cycle[],
   maxDisplayedCycles: number,
@@ -100,24 +100,24 @@ export function getPregnancyChance(
   return i18n.t("Low");
 }
 
-export function getDaysBeforePeriod(
+export function getDaysBeforePeriod Diaryod(
   cycles: Cycle[],
   maxDisplayedCycles: number,
 ) {
   if (cycles.length === 0) {
     return {
-      title: i18n.t("Period in"),
+      title: i18n.t("Period Diaryod in"),
       days: i18n.t("---"),
     };
   }
 
-  const periodLength = cycles[0].periodLength;
+  const Period DiaryodLength = cycles[0].Period DiaryodLength;
   const dayOfCycle = getDayOfCycle(cycles);
 
-  // The cycle starts with period, so if the current day of the cycle is, for example, 3 (dayOfCycle = 3), and period lasts 6 days (periodLength = 6), then the result is "Period 3rd day"
-  if (dayOfCycle <= periodLength) {
+  // The cycle starts with Period Diaryod, so if the current day of the cycle is, for example, 3 (dayOfCycle = 3), and Period Diaryod lasts 6 days (Period DiaryodLength = 6), then the result is "Period Diaryod 3rd day"
+  if (dayOfCycle <= Period DiaryodLength) {
     return {
-      title: i18n.t("Period"),
+      title: i18n.t("Period Diaryod"),
       days: `${i18n.t("day", {
         count: dayOfCycle,
         ordinal: true,
@@ -128,7 +128,7 @@ export function getDaysBeforePeriod(
   // NOTE: 28 is the default cycle length. If there is only one cycle in the array, its length will be 28. But since this is the first cycle, we do not know its exact length, it may be longer. Therefore, in this case, we do not display the "Delay", but display the "possible today"
   if (cycles.length === 1 && cycles[0].cycleLength >= 28) {
     return {
-      title: i18n.t("Period is"),
+      title: i18n.t("Period Diaryod is"),
       days: i18n.t("possible today"),
     };
   }
@@ -146,7 +146,7 @@ export function getDaysBeforePeriod(
 
   if (dayBefore > 0) {
     return {
-      title: i18n.t("Period in"),
+      title: i18n.t("Period Diaryod in"),
       days: `${dayBefore} ${i18n.t("Days", {
         postProcess: "interval",
         count: dayBefore,
@@ -156,7 +156,7 @@ export function getDaysBeforePeriod(
 
   if (dayBefore === 0) {
     return {
-      title: i18n.t("Period"),
+      title: i18n.t("Period Diaryod"),
       days: i18n.t("today"),
     };
   }
@@ -172,7 +172,7 @@ export function getDaysBeforePeriod(
 
 export function getPhase(cycles: Cycle[], maxDisplayedCycles: number) {
   const lengthOfCycle = getAverageLengthOfCycle(cycles, maxDisplayedCycles);
-  const lengthOfPeriod = getLengthOfLastPeriod(cycles);
+  const lengthOfPeriod Diaryod = getLengthOfLastPeriod Diaryod(cycles);
   const currentDay = getDayOfCycle(cycles);
 
   const lutealPhaseLength = 14;
@@ -223,7 +223,7 @@ export function getPhase(cycles: Cycle[], maxDisplayedCycles: number) {
     luteal: {
       title: i18n.t("Luteal phase"),
       description: i18n.t(
-        "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.",
+        "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.",
       ),
       symptoms: [
         i18n.t("breast tenderness"),
@@ -239,7 +239,7 @@ export function getPhase(cycles: Cycle[], maxDisplayedCycles: number) {
   if (cycles.length === 0) {
     return phases.non;
   }
-  if (currentDay <= lengthOfPeriod) {
+  if (currentDay <= lengthOfPeriod Diaryod) {
     return phases.menstrual;
   }
 
@@ -275,7 +275,7 @@ export function getAverageLengthOfCycle(
   return Math.round(sum / (length - 1));
 }
 
-export function getAverageLengthOfPeriod(
+export function getAverageLengthOfPeriod Diaryod(
   cycles: Cycle[],
   maxDisplayedCycles: number,
 ) {
@@ -283,11 +283,11 @@ export function getAverageLengthOfPeriod(
   const length = displayedCycles.length;
 
   if (length <= 1) {
-    return length === 0 ? 0 : displayedCycles[0].periodLength;
+    return length === 0 ? 0 : displayedCycles[0].Period DiaryodLength;
   }
 
   const sum = displayedCycles.reduce(
-    (prev, current) => prev + current.periodLength,
+    (prev, current) => prev + current.Period DiaryodLength,
     0,
   );
 
@@ -295,13 +295,13 @@ export function getAverageLengthOfPeriod(
 }
 
 // This function creates a new "cycles" array.
-// The "periodDays" parameter is an array of marked dates in the calendar (i.e. all marked dates of the period)
-export function getNewCyclesHistory(periodDays: string[]) {
-  if (periodDays.length === 0) {
+// The "Period DiaryodDays" parameter is an array of marked dates in the calendar (i.e. all marked dates of the Period Diaryod)
+export function getNewCyclesHistory(Period DiaryodDays: string[]) {
+  if (Period DiaryodDays.length === 0) {
     return [];
   }
 
-  periodDays.sort((left, right) => {
+  Period DiaryodDays.sort((left, right) => {
     const leftDate = new Date(left);
     const rightDate = new Date(right);
     return leftDate.getTime() - rightDate.getTime();
@@ -311,28 +311,28 @@ export function getNewCyclesHistory(periodDays: string[]) {
     {
       // If there is only one cycle in the array, length of this cycle will be 28 (default length)
       cycleLength: 28,
-      periodLength: 1,
-      startDate: periodDays[0],
+      Period DiaryodLength: 1,
+      startDate: Period DiaryodDays[0],
     },
   ];
 
   // In this we form a new "cycles" array
-  for (let i = 1; i < periodDays.length; i++) {
-    const date = startOfDay(new Date(periodDays[i]));
-    const prevDate = startOfDay(new Date(periodDays[i - 1]));
+  for (let i = 1; i < Period DiaryodDays.length; i++) {
+    const date = startOfDay(new Date(Period DiaryodDays[i]));
+    const prevDate = startOfDay(new Date(Period DiaryodDays[i - 1]));
     const diffInDays = differenceInDays(date, prevDate);
 
     // If "diffInDays" is 1, it means that the dates are consecutive. (The "diffInDays" is always >=0 because the array is sorted and "prevDate" is always less than "date")
     // If "diffInDays" is 2, it means that there is one day between them.
     // Our algorithm only works if the dates of the month are consecutive. Therefore, we "fill" the day between them.
     if (diffInDays <= 2) {
-      newCycles[0].periodLength += diffInDays;
+      newCycles[0].Period DiaryodLength += diffInDays;
     } else {
-      newCycles[0].cycleLength = diffInDays + newCycles[0].periodLength - 1;
+      newCycles[0].cycleLength = diffInDays + newCycles[0].Period DiaryodLength - 1;
       newCycles.unshift({
         cycleLength: 0,
-        periodLength: 1,
-        startDate: periodDays[i],
+        Period DiaryodLength: 1,
+        startDate: Period DiaryodDays[i],
       });
     }
   }
@@ -351,24 +351,24 @@ export function getMaxStoredCountOfCycles(maxDisplayedCycles: number) {
 }
 
 // The function returns an array of generated dates
-export function getPeriodDates(cycles: Cycle[], maxDisplayedCycles: number) {
-  const periodDays: string[] = [];
+export function getPeriod DiaryodDates(cycles: Cycle[], maxDisplayedCycles: number) {
+  const Period DiaryodDays: string[] = [];
   const maxOfCycles = getMaxStoredCountOfCycles(maxDisplayedCycles);
 
   cycles.slice(0, maxOfCycles).forEach((cycle) => {
     const startOfCycle = startOfDay(new Date(cycle.startDate));
 
-    const days = Array.from({ length: cycle.periodLength }, (_, i) =>
+    const days = Array.from({ length: cycle.Period DiaryodLength }, (_, i) =>
       format(addDays(startOfCycle, i), "yyyy-MM-dd"),
     );
 
-    periodDays.push(...days);
+    Period DiaryodDays.push(...days);
   });
 
-  return periodDays;
+  return Period DiaryodDays;
 }
 
-export function getPeriodDatesOfLastCycle(cycles: Cycle[]) {
+export function getPeriod DiaryodDatesOfLastCycle(cycles: Cycle[]) {
   if (cycles.length === 0) {
     return [];
   }
@@ -376,7 +376,7 @@ export function getPeriodDatesOfLastCycle(cycles: Cycle[]) {
   const lastCycle = cycles[0];
   const startOfCycle = startOfDay(new Date(lastCycle.startDate));
 
-  return Array.from({ length: lastCycle.periodLength }, (_, i) =>
+  return Array.from({ length: lastCycle.Period DiaryodLength }, (_, i) =>
     format(addDays(startOfCycle, i), "yyyy-MM-dd"),
   );
 }
@@ -390,53 +390,53 @@ export function getActiveDates(date: Date, cycles: Cycle[]) {
     return maybeActiveDate <= now;
   }
 
-  const endPeriod = addDays(
+  const endPeriod Diaryod = addDays(
     startOfDay(new Date(cycles[0].startDate)),
-    cycles[0].periodLength - 1,
+    cycles[0].Period DiaryodLength - 1,
   );
 
-  return maybeActiveDate <= endPeriod || maybeActiveDate <= now;
+  return maybeActiveDate <= endPeriod Diaryod || maybeActiveDate <= now;
 }
 
 // The function returns the dates of all previous cycles, and adds the dates for the current cycle, starting from today and for several days after
-export function getPeriodDatesWithNewElement(
+export function getPeriod DiaryodDatesWithNewElement(
   cycles: Cycle[],
   maxDisplayedCycles: number,
 ) {
   const nowDate = startOfToday();
   // Forming an array of dates based on cycles
-  // getPeriodDates(cycles) returns an array of strings with dates in ISO format
+  // getPeriod DiaryodDates(cycles) returns an array of strings with dates in ISO format
   // Using map , these strings are converted to Date objects, and then back to strings, but in the format returned by Date.prototype.toString()
-  const periodDates = getPeriodDates(cycles, maxDisplayedCycles).map(
+  const Period DiaryodDates = getPeriod DiaryodDates(cycles, maxDisplayedCycles).map(
     (isoDateString) => parseISO(isoDateString).toString(),
   );
-  // Gets the average length of the period based on the given cycles
+  // Gets the average length of the Period Diaryod based on the given cycles
   // If the average length is not defined, it defaults to 5 days (for the case when the array is empty)
-  const lengthOfPeriod =
-    getAverageLengthOfPeriod(cycles, maxDisplayedCycles) || 5;
+  const lengthOfPeriod Diaryod =
+    getAverageLengthOfPeriod Diaryod(cycles, maxDisplayedCycles) || 5;
 
-  // Checking for completion of current period
+  // Checking for completion of current Period Diaryod
   if (cycles.length > 0) {
-    // It calculates the end date of the last period (period of current cycle)
+    // It calculates the end date of the last Period Diaryod (Period Diaryod of current cycle)
     const endOfCurrentCycle = addDays(
       startOfDay(new Date(cycles[0].startDate)),
-      cycles[0].periodLength,
+      cycles[0].Period DiaryodLength,
     );
-    // If the period has not yet completed, the function returns an empty array, since there is no need to add new dates
+    // If the Period Diaryod has not yet completed, the function returns an empty array, since there is no need to add new dates
     if (endOfCurrentCycle >= nowDate) {
       return [];
     }
   }
 
   // Create additional dates that start from today and continue for several days (it's a new cycle, a new future element of the array)
-  const additionalDays = Array.from({ length: lengthOfPeriod }, (_, i) =>
+  const additionalDays = Array.from({ length: lengthOfPeriod Diaryod }, (_, i) =>
     addDays(nowDate, i).toString(),
   );
 
-  return periodDates.concat(additionalDays);
+  return Period DiaryodDates.concat(additionalDays);
 }
 
-export function getForecastPeriodDates(
+export function getForecastPeriod DiaryodDates(
   cycles: Cycle[],
   maxDisplayedCycles: number,
 ) {
@@ -445,7 +445,7 @@ export function getForecastPeriodDates(
   }
 
   const lengthOfCycle = getAverageLengthOfCycle(cycles, maxDisplayedCycles);
-  const lengthOfPeriod = getAverageLengthOfPeriod(cycles, maxDisplayedCycles);
+  const lengthOfPeriod Diaryod = getAverageLengthOfPeriod Diaryod(cycles, maxDisplayedCycles);
   const dayOfCycle = getDayOfCycle(cycles);
   const nowDate = startOfToday();
   const forecastDates: string[] = [];
@@ -461,7 +461,7 @@ export function getForecastPeriodDates(
   // Function to add dates to a "forecastDates" array
   const addForecastDates = (startDate: Date) => {
     forecastDates.push(
-      ...Array.from({ length: lengthOfPeriod }, (_, i) =>
+      ...Array.from({ length: lengthOfPeriod Diaryod }, (_, i) =>
         format(addDays(startDate, i), "yyyy-MM-dd"),
       ),
     );
@@ -484,15 +484,15 @@ export function getForecastPeriodDates(
   return forecastDates;
 }
 
-// NOTE: This Function is needed to block the Mark button if today is period
-export function isPeriodToday(cycles: Cycle[]) {
+// NOTE: This Function is needed to block the Mark button if today is Period Diaryod
+export function isPeriod DiaryodToday(cycles: Cycle[]) {
   if (cycles.length === 0) {
     return false;
   }
 
   const dayOfCycle = getDayOfCycle(cycles);
 
-  return dayOfCycle <= cycles[0].periodLength;
+  return dayOfCycle <= cycles[0].Period DiaryodLength;
 }
 
 export function getOvulationDates(cycles: Cycle[], maxDisplayedCycles: number) {
@@ -574,14 +574,14 @@ export function getFutureOvulationDates(
 }
 
 // NOTE: This function calculates the date for notification
-export function getPeriodShiftInDays(
+export function getPeriod DiaryodShiftInDays(
   cycles: Cycle[],
-  periodShiftInDays: number,
+  Period DiaryodShiftInDays: number,
   maxDisplayedCycles: number,
 ) {
   const cycleLength = getAverageLengthOfCycle(cycles, maxDisplayedCycles);
   return addDays(
     startOfDay(new Date(cycles[0].startDate)),
-    cycleLength + periodShiftInDays,
+    cycleLength + Period DiaryodShiftInDays,
   );
 }

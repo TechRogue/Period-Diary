@@ -1,9 +1,9 @@
 const es = {
   // Home Tab
   Home: "Inicio",
-  "Period in": "Menstruación en",
+  "Period Diaryod in": "Menstruación en",
   "no info": "Desconocido",
-  Period: "Menstruación",
+  Period Diaryod: "Menstruación",
   today: "Hoy",
   Delay: "Retraso",
   Days: "(0)[Días];(1)[Día];(2-inf)[Días]",
@@ -17,24 +17,24 @@ const es = {
   "chance of getting pregnant": "Posibilidad de quedar embarazada",
   High: "Alta",
   Low: "Baja",
-  "Period today": "Menstruación hoy",
+  "Period Diaryod today": "Menstruación hoy",
   edit: "Editar",
   save: "Guardar",
-  "Period is": "Menstruación",
+  "Period Diaryod is": "Menstruación",
   "possible today": "Es posible hoy",
   // Details Tab
   Details: "Detalles",
-  "Period length": "Duración de la menstruación",
+  "Period Diaryod length": "Duración de la menstruación",
   "Cycle length": "Duración del ciclo",
-  "You haven't marked any periods yet":
+  "You haven't marked any Period Diaryods yet":
     "Aún no has marcado ningún día de menstruación",
   // Mark Modal
   mark: "Marcar",
   cancel: "Cancelar",
   // Welcome Modal
-  "Welcome to Peri": "Te damos la bienvenida a Peri",
+  "Welcome to Period Diary": "Te damos la bienvenida a Period Diary",
   "Mark the days of your": "Marca los días de tu",
-  "last period": "última menstruación",
+  "last Period Diaryod": "última menstruación",
   Continue: "Continuar",
   "Forecast will not be generated.": "No se generará el pronóstico.",
   or: "o",
@@ -69,7 +69,7 @@ const es = {
   "characteristic secretions": "Secreciones características",
 
   "Luteal phase": "Fase lútea",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Los niveles de las hormonas estrógeno y progesterona primero aumentan y luego caen bruscamente justo antes de la menstruación. La progesterona alcanza su punto máximo en la fase lútea.",
   "breast tenderness": "Sensibilidad en los senos",
   puffiness: "Hinchazón",

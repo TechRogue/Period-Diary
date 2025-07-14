@@ -1,9 +1,9 @@
 const id = {
   // Home Tab
   Home: "Beranda",
-  "Period in": "Haid dalam",
+  "Period Diaryod in": "Haid dalam",
   "no info": "tidak ada informasi",
-  Period: "Haid",
+  Period Diaryod: "Haid",
   today: "hari ini",
   Delay: "Terlambat",
   Days: "(0-inf)[Hari]",
@@ -17,26 +17,26 @@ const id = {
   "chance of getting pregnant": "peluang kehamilan",
   High: "Tinggi",
   Low: "Rendah",
-  "Period today": "Haid hari ini",
+  "Period Diaryod today": "Haid hari ini",
   edit: "ubah",
   save: "simpan",
-  "Period is": "Haid",
+  "Period Diaryod is": "Haid",
   "possible today": "mungkin hari ini",
 
   // Details Tab
   Details: "Detail",
-  "Period length": "Durasi haid",
+  "Period Diaryod length": "Durasi haid",
   "Cycle length": "Durasi siklus",
-  "You haven't marked any periods yet": "Kamu belum menandai hari haid",
+  "You haven't marked any Period Diaryods yet": "Kamu belum menandai hari haid",
 
   // Mark Modal
   mark: "tandai",
   cancel: "batal",
 
   // Welcome Modal
-  "Welcome to Peri": "Selamat datang di Peri",
+  "Welcome to Period Diary": "Selamat datang di Period Diary",
   "Mark the days of your": "Tandai hari-hari",
-  "last period": "haid terakhir",
+  "last Period Diaryod": "haid terakhir",
   Continue: "Lanjutkan",
   "Forecast will not be generated.": "Perkiraan tidak akan dibuat.",
   or: "atau",
@@ -73,7 +73,7 @@ const id = {
   "characteristic secretions": "sekresi khas",
 
   "Luteal phase": "Fase Luteal",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Kadar hormon estrogen dan progesteron awalnya meningkat lalu menurun tajam tepat sebelum haid. Progesteron mencapai puncaknya pada fase luteal.",
   "breast tenderness": "sensitivitas payudara",
   puffiness: "pembengkakan",

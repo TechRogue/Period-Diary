@@ -1,9 +1,9 @@
 const de = {
   // Home Tab
   Home: "Home",
-  "Period in": "Periode in",
+  "Period Diaryod in": "Period Diaryode in",
   "no info": "keine infos",
-  Period: "Periode",
+  Period Diaryod: "Period Diaryode",
   today: "heute",
   Delay: "Verzögerung",
   Days: "(0)[Tage];(1)[Tag];(2-inf)[Tage];",
@@ -17,24 +17,24 @@ const de = {
   "chance of getting pregnant": "Chance schwanger zu werden",
   High: "Hohe",
   Low: "Geringe",
-  "Period today": "Periode heute",
+  "Period Diaryod today": "Period Diaryode heute",
   edit: "Bearbeiten",
   save: "Speichern",
-  "Period is": "Periode ist",
+  "Period Diaryod is": "Period Diaryode ist",
   "possible today": "heute möglich",
   // Details Tab
   Details: "Statistik",
-  "Period length": "Periodenlänge",
+  "Period Diaryod length": "Period Diaryodenlänge",
   "Cycle length": "Zykluslänge",
-  "You haven't marked any periods yet":
-    "Sie haben noch keine Perioden eingetragen",
+  "You haven't marked any Period Diaryods yet":
+    "Sie haben noch keine Period Diaryoden eingetragen",
   // Mark Modal
   mark: "Eintragen",
   cancel: "Abbrechen",
   // Welcome Modal
-  "Welcome to Peri": "Willkommen bei Peri",
+  "Welcome to Period Diary": "Willkommen bei Period Diary",
   "Mark the days of your": "Markieren Sie die Tage Ihrer",
-  "last period": "letzte Periode",
+  "last Period Diaryod": "letzte Period Diaryode",
   Continue: "Fortsetzen",
   "Forecast will not be generated.": "Vorhersage wird nicht erstellt",
   or: "oder",
@@ -69,8 +69,8 @@ const de = {
   "characteristic secretions": "Charakteristische Sekrete",
 
   "Luteal phase": "Lutealphase",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
-    "Die Hormone Östrogen und Progesteron steigen erst und fallen kurz vor der Periode stark ab. Progesteron erreicht seinen Höhepunkt in der Lutealphase.",
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
+    "Die Hormone Östrogen und Progesteron steigen erst und fallen kurz vor der Period Diaryode stark ab. Progesteron erreicht seinen Höhepunkt in der Lutealphase.",
   "breast tenderness": "Brustspannen",
   puffiness: "Schwellungen",
   "acne and skin rashes": "Akne und Hautausschläge",

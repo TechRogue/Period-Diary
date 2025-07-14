@@ -310,14 +310,14 @@ const App = (props: AppProps) => {
                   <IonRouterOutlet>
                     <Route
                       exact
-                      path="/peri/"
+                      path="/Period Diary/"
                     >
                       <TabHome />
                     </Route>
 
                     <Route
                       exact
-                      path="/peri-details/"
+                      path="/Period Diary-details/"
                     >
                       <TabDetails />
                     </Route>
@@ -326,7 +326,7 @@ const App = (props: AppProps) => {
                       exact
                       path="/"
                     >
-                      <Redirect to="/peri/" />
+                      <Redirect to="/Period Diary/" />
                     </Route>
                   </IonRouterOutlet>
 
@@ -357,7 +357,7 @@ const App = (props: AppProps) => {
 
                     <IonTabButton
                       tab="home"
-                      href="/peri/"
+                      href="/Period Diary/"
                       className={theme}
                       style={{ marginLeft: "auto" }}
                     >
@@ -365,7 +365,7 @@ const App = (props: AppProps) => {
                     </IonTabButton>
                     <IonTabButton
                       tab="details"
-                      href="/peri-details/"
+                      href="/Period Diary-details/"
                       className={theme}
                       style={{ marginLeft: "15px", marginRight: "20px" }}
                     >

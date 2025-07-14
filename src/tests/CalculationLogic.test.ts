@@ -16,18 +16,18 @@ import {
   getPregnancyChance,
   getDayOfCycle,
   getAverageLengthOfCycle,
-  getAverageLengthOfPeriod,
-  getDaysBeforePeriod,
+  getAverageLengthOfPeriod Diaryod,
+  getDaysBeforePeriod Diaryod,
   getPhase,
   getNewCyclesHistory,
   getActiveDates,
-  getPeriodDates,
-  getPeriodDatesWithNewElement,
+  getPeriod DiaryodDates,
+  getPeriod DiaryodDatesWithNewElement,
   getLastStartDate,
-  getLengthOfLastPeriod,
-  getForecastPeriodDates,
+  getLengthOfLastPeriod Diaryod,
+  getForecastPeriod DiaryodDates,
   getOvulationDates,
-  getPeriodDatesOfLastCycle,
+  getPeriod DiaryodDatesOfLastCycle,
 } from "../state/CalculationLogics";
 
 const maxDisplayedCycles = 6;
@@ -48,7 +48,7 @@ describe("getOvulationStatus", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -73,7 +73,7 @@ describe("getOvulationStatus", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -93,7 +93,7 @@ describe("getOvulationStatus", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -113,7 +113,7 @@ describe("getOvulationStatus", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -133,7 +133,7 @@ describe("getOvulationStatus", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -159,7 +159,7 @@ describe("getPregnancyChance", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -178,7 +178,7 @@ describe("getPregnancyChance", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -205,7 +205,7 @@ describe("getDayOfCycle", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -227,7 +227,7 @@ describe("getAverageLengthOfCycle", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 28,
-        periodLength: 5,
+        Period DiaryodLength: 5,
         startDate: "2023-06-30",
       },
     ];
@@ -241,17 +241,17 @@ describe("getAverageLengthOfCycle", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 0,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-06-30",
       },
       {
         cycleLength: 29,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-06-03",
       },
       {
         cycleLength: 27,
-        periodLength: 4,
+        Period DiaryodLength: 4,
         startDate: "2023-05-07",
       },
     ];
@@ -259,9 +259,9 @@ describe("getAverageLengthOfCycle", () => {
   });
 });
 
-describe("getAverageLengthOfPeriod", () => {
+describe("getAverageLengthOfPeriod Diaryod", () => {
   it("cycles array is empty", () => {
-    expect(getAverageLengthOfPeriod([], maxDisplayedCycles)).toEqual(0);
+    expect(getAverageLengthOfPeriod Diaryod([], maxDisplayedCycles)).toEqual(0);
   });
 
   it("only one item in the cycles array", () => {
@@ -271,11 +271,11 @@ describe("getAverageLengthOfPeriod", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 28,
-        periodLength: 5,
+        Period DiaryodLength: 5,
         startDate: "2023-06-30",
       },
     ];
-    expect(getAverageLengthOfPeriod(cycles, maxDisplayedCycles)).toEqual(5);
+    expect(getAverageLengthOfPeriod Diaryod(cycles, maxDisplayedCycles)).toEqual(5);
   });
 
   it("more than one item in the cycles array", () => {
@@ -285,36 +285,36 @@ describe("getAverageLengthOfPeriod", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 0,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-06-30",
       },
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-06-03",
       },
       {
         cycleLength: 26,
-        periodLength: 4,
+        Period DiaryodLength: 4,
         startDate: "2023-05-07",
       },
     ];
-    expect(getAverageLengthOfPeriod(cycles, maxDisplayedCycles)).toEqual(5);
+    expect(getAverageLengthOfPeriod Diaryod(cycles, maxDisplayedCycles)).toEqual(5);
   });
 });
 
-describe("getDaysBeforePeriod", () => {
+describe("getDaysBeforePeriod Diaryod", () => {
   it("cycles array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
-    expect(getDaysBeforePeriod([], maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period in"),
+    expect(getDaysBeforePeriod Diaryod([], maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod in"),
       days: i18n.t("---"),
     });
   });
 
-  it("period in the few days", () => {
+  it("Period Diaryod in the few days", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -325,14 +325,14 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period in"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod in"),
       days: `10 ${i18n.t("Days", {
         postProcess: "interval",
         count: 10,
@@ -340,7 +340,7 @@ describe("getDaysBeforePeriod", () => {
     });
   });
 
-  it("period in 1 Day", () => {
+  it("Period Diaryod in 1 Day", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -351,14 +351,14 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period in"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod in"),
       days: `1 ${i18n.t("Days", {
         postProcess: "interval",
         count: 1,
@@ -366,7 +366,7 @@ describe("getDaysBeforePeriod", () => {
     });
   });
 
-  it("period is today", () => {
+  it("Period Diaryod is today", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -378,19 +378,19 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod"),
       days: i18n.t("today"),
     });
   });
 
-  it("cycles length is one and period is today", () => {
+  it("cycles length is one and Period Diaryod is today", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -399,13 +399,13 @@ describe("getDaysBeforePeriod", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: subDays(date, 28).toString(),
       },
     ];
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period is"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod is"),
       days: i18n.t("possible today"),
     });
   });
@@ -421,13 +421,13 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
       title: i18n.t("Delay"),
       days: `1 ${i18n.t("Days", {
         postProcess: "interval",
@@ -447,13 +447,13 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
       title: i18n.t("Delay"),
       days: `10 ${i18n.t("Days", {
         postProcess: "interval",
@@ -470,18 +470,18 @@ describe("getDaysBeforePeriod", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: subDays(date, 28).toString(),
       },
     ];
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period is"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod is"),
       days: i18n.t("possible today"),
     });
   });
 
-  it("today is one of the days of period", () => {
+  it("today is one of the days of Period Diaryod", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -492,14 +492,14 @@ describe("getDaysBeforePeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getDaysBeforePeriod(cycles, maxDisplayedCycles)).toEqual({
-      title: i18n.t("Period"),
+    expect(getDaysBeforePeriod Diaryod(cycles, maxDisplayedCycles)).toEqual({
+      title: i18n.t("Period Diaryod"),
       days: i18n.t("day"),
     });
   });
@@ -548,7 +548,7 @@ const phases = {
   luteal: {
     title: "Luteal phase",
     description:
-      "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.",
+      "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.",
     symptoms: [
       "breast tenderness",
       "puffiness",
@@ -578,7 +578,7 @@ describe("getPhase", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -598,7 +598,7 @@ describe("getPhase", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -618,7 +618,7 @@ describe("getPhase", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -638,7 +638,7 @@ describe("getPhase", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -649,17 +649,17 @@ describe("getPhase", () => {
 });
 
 describe("getNewCyclesHistory", () => {
-  it("periodDays array is empty", () => {
+  it("Period DiaryodDays array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
     expect(getNewCyclesHistory([])).toEqual([]);
   });
 
-  it("periodDays array has a clear ranges", () => {
+  it("Period DiaryodDays array has a clear ranges", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
-    const periodDays = [
+    const Period DiaryodDays = [
       "2023-08-04",
       "2023-08-05",
       "2023-08-06",
@@ -679,18 +679,18 @@ describe("getNewCyclesHistory", () => {
       "2023-06-13",
       "2023-06-14",
     ];
-    expect(getNewCyclesHistory(periodDays)).toEqual([
-      { cycleLength: 0, periodLength: 6, startDate: "2023-08-04" },
-      { cycleLength: 28, periodLength: 6, startDate: "2023-07-07" },
-      { cycleLength: 28, periodLength: 6, startDate: "2023-06-09" },
+    expect(getNewCyclesHistory(Period DiaryodDays)).toEqual([
+      { cycleLength: 0, Period DiaryodLength: 6, startDate: "2023-08-04" },
+      { cycleLength: 28, Period DiaryodLength: 6, startDate: "2023-07-07" },
+      { cycleLength: 28, Period DiaryodLength: 6, startDate: "2023-06-09" },
     ]);
   });
 
-  it("periodDays array has not a clear ranges", () => {
+  it("Period DiaryodDays array has not a clear ranges", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
-    const periodDays = [
+    const Period DiaryodDays = [
       "2023-08-04",
       "2023-08-06",
       "2023-08-08",
@@ -704,19 +704,19 @@ describe("getNewCyclesHistory", () => {
       "2023-06-12",
       "2023-06-14",
     ];
-    expect(getNewCyclesHistory(periodDays)).toEqual([
-      { cycleLength: 0, periodLength: 6, startDate: "2023-08-04" },
-      { cycleLength: 28, periodLength: 6, startDate: "2023-07-07" },
-      { cycleLength: 28, periodLength: 6, startDate: "2023-06-09" },
+    expect(getNewCyclesHistory(Period DiaryodDays)).toEqual([
+      { cycleLength: 0, Period DiaryodLength: 6, startDate: "2023-08-04" },
+      { cycleLength: 28, Period DiaryodLength: 6, startDate: "2023-07-07" },
+      { cycleLength: 28, Period DiaryodLength: 6, startDate: "2023-06-09" },
     ]);
   });
 });
 
-describe("getPeriodDays", () => {
+describe("getPeriod DiaryodDays", () => {
   it("cycles array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
-    expect(getPeriodDates([], maxDisplayedCycles)).toEqual([]);
+    expect(getPeriod DiaryodDates([], maxDisplayedCycles)).toEqual([]);
   });
 
   it("cycles array has a few items", () => {
@@ -726,22 +726,22 @@ describe("getPeriodDays", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 0,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-08-05",
       },
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-07-08",
       },
       {
         cycleLength: 26,
-        periodLength: 4,
+        Period DiaryodLength: 4,
         startDate: "2023-06-10",
       },
     ];
 
-    const periodDays = [
+    const Period DiaryodDays = [
       "2023-08-05",
       "2023-08-06",
       "2023-08-07",
@@ -760,15 +760,15 @@ describe("getPeriodDays", () => {
       "2023-06-13",
     ];
 
-    expect(getPeriodDates(cycles, maxDisplayedCycles)).toEqual(periodDays);
+    expect(getPeriod DiaryodDates(cycles, maxDisplayedCycles)).toEqual(Period DiaryodDays);
   });
 });
 
-describe("getLastPeriodDays", () => {
+describe("getLastPeriod DiaryodDays", () => {
   it("cycles array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
-    expect(getPeriodDatesOfLastCycle([])).toEqual([]);
+    expect(getPeriod DiaryodDatesOfLastCycle([])).toEqual([]);
   });
 
   it("cycles array has a few items", () => {
@@ -778,22 +778,22 @@ describe("getLastPeriodDays", () => {
     const cycles: Cycle[] = [
       {
         cycleLength: 0,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-08-05",
       },
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-07-08",
       },
       {
         cycleLength: 26,
-        periodLength: 4,
+        Period DiaryodLength: 4,
         startDate: "2023-06-10",
       },
     ];
 
-    const lastPeriodDays = [
+    const lastPeriod DiaryodDays = [
       "2023-08-05",
       "2023-08-06",
       "2023-08-07",
@@ -802,7 +802,7 @@ describe("getLastPeriodDays", () => {
       "2023-08-10",
     ];
 
-    expect(getPeriodDatesOfLastCycle(cycles)).toEqual(lastPeriodDays);
+    expect(getPeriod DiaryodDatesOfLastCycle(cycles)).toEqual(lastPeriod DiaryodDays);
   });
 });
 
@@ -814,7 +814,7 @@ describe("getActiveDates", () => {
     expect(getActiveDates(startOfToday(), [])).toEqual(true);
   });
 
-  it("now is menstrual phase items and checking 2th day of period", () => {
+  it("now is menstrual phase items and checking 2th day of Period Diaryod", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
@@ -825,7 +825,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -846,7 +846,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -867,7 +867,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -888,7 +888,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -909,7 +909,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -930,7 +930,7 @@ describe("getActiveDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -941,19 +941,19 @@ describe("getActiveDates", () => {
   });
 });
 
-describe("getPastFuturePeriodDays", () => {
+describe("getPastFuturePeriod DiaryodDays", () => {
   it("cycles array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
 
-    const periodDates: string[] = [];
+    const Period DiaryodDates: string[] = [];
     const nowDate = startOfToday();
     for (let day = 0; day < 5; day++) {
-      const periodDay = addDays(nowDate, day);
-      periodDates.push(periodDay.toString());
+      const Period DiaryodDay = addDays(nowDate, day);
+      Period DiaryodDates.push(Period DiaryodDay.toString());
     }
-    expect(getPeriodDatesWithNewElement([], maxDisplayedCycles)).toEqual(
-      periodDates,
+    expect(getPeriod DiaryodDatesWithNewElement([], maxDisplayedCycles)).toEqual(
+      Period DiaryodDates,
     );
   });
 
@@ -968,25 +968,25 @@ describe("getPastFuturePeriodDays", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 5,
+        Period DiaryodLength: 5,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    const periodDates = getPeriodDates(cycles, maxDisplayedCycles).map(
+    const Period DiaryodDates = getPeriod DiaryodDates(cycles, maxDisplayedCycles).map(
       (isoDateString) => {
         return parseISO(isoDateString).toString();
       },
     );
     const nowDate = startOfToday();
     for (let day = 0; day < 5; day++) {
-      const periodDay = addDays(nowDate, day);
-      periodDates.push(periodDay.toString());
+      const Period DiaryodDay = addDays(nowDate, day);
+      Period DiaryodDates.push(Period DiaryodDay.toString());
     }
 
-    expect(getPeriodDatesWithNewElement(cycles, maxDisplayedCycles)).toEqual(
-      periodDates,
+    expect(getPeriod DiaryodDatesWithNewElement(cycles, maxDisplayedCycles)).toEqual(
+      Period DiaryodDates,
     );
   });
 
@@ -1001,13 +1001,13 @@ describe("getPastFuturePeriodDays", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 5,
+        Period DiaryodLength: 5,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    const periodDates = getPeriodDates(cycles, maxDisplayedCycles).map(
+    const Period DiaryodDates = getPeriod DiaryodDates(cycles, maxDisplayedCycles).map(
       (isoDateString) => {
         return parseISO(isoDateString).toString();
       },
@@ -1015,12 +1015,12 @@ describe("getPastFuturePeriodDays", () => {
     const nowDate = startOfToday();
 
     for (let day = 0; day < 5; day++) {
-      const periodDay = addDays(nowDate, day);
-      periodDates.push(periodDay.toString());
+      const Period DiaryodDay = addDays(nowDate, day);
+      Period DiaryodDates.push(Period DiaryodDay.toString());
     }
 
-    expect(getPeriodDatesWithNewElement(cycles, maxDisplayedCycles)).toEqual(
-      periodDates,
+    expect(getPeriod DiaryodDatesWithNewElement(cycles, maxDisplayedCycles)).toEqual(
+      Period DiaryodDates,
     );
   });
 });
@@ -1041,7 +1041,7 @@ describe("getLastStartDate", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -1051,9 +1051,9 @@ describe("getLastStartDate", () => {
   });
 });
 
-describe("getLengthOfLastPeriod", () => {
+describe("getLengthOfLastPeriod Diaryod", () => {
   it("cycles array is empty", () => {
-    expect(getLengthOfLastPeriod([])).toEqual(0);
+    expect(getLengthOfLastPeriod Diaryod([])).toEqual(0);
   });
 
   it("cycles array has a few items", () => {
@@ -1067,21 +1067,21 @@ describe("getLengthOfLastPeriod", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
     cycles[0].cycleLength = 0;
 
-    expect(getLengthOfLastPeriod(cycles)).toEqual(cycles[0].periodLength);
+    expect(getLengthOfLastPeriod Diaryod(cycles)).toEqual(cycles[0].Period DiaryodLength);
   });
 });
 
-describe("getForecastPeriodDates", () => {
+describe("getForecastPeriod DiaryodDates", () => {
   it("cycles array is empty", () => {
     // @ts-expect-error mocked `t` method
     vi.spyOn(i18n, "t").mockImplementation((key) => key);
-    expect(getForecastPeriodDates([], maxDisplayedCycles)).toEqual([]);
+    expect(getForecastPeriod DiaryodDates([], maxDisplayedCycles)).toEqual([]);
   });
 
   it("cycles array has a few items", () => {
@@ -1095,7 +1095,7 @@ describe("getForecastPeriodDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }
@@ -1115,7 +1115,7 @@ describe("getForecastPeriodDates", () => {
       }
     }
 
-    expect(getForecastPeriodDates(cycles, maxDisplayedCycles)).toEqual(
+    expect(getForecastPeriod DiaryodDates(cycles, maxDisplayedCycles)).toEqual(
       forecastDays,
     );
   });
@@ -1138,7 +1138,7 @@ describe("getOvulationDates", () => {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 0,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
 
@@ -1156,7 +1156,7 @@ describe("getOvulationDates", () => {
       date = subDays(date, 28);
       cycles.push({
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: date.toString(),
       });
     }

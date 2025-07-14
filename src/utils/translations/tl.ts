@@ -1,9 +1,9 @@
 const tl = {
   // Home Tab
   Home: "Simula",
-  "Period in": "Regla sa",
+  "Period Diaryod in": "Regla sa",
   "no info": "Walang impormasyon",
-  Period: "Regla",
+  Period Diaryod: "Regla",
   today: "Ngayon",
   Delay: "Antala",
   Days: "(0)[Mga araw];(1)[Araw];(2-4)[Mga araw];(5-20)[Mga araw];(21)[Araw];(22-24)[Mga araw];(25-30)[Mga araw];(31)[Araw];(32-34)[Mga araw];(35-40)[Mga araw];",
@@ -17,23 +17,23 @@ const tl = {
   "chance of getting pregnant": "Pagkakataon na mabuntis",
   High: "Mataas",
   Low: "Mababa",
-  "Period today": "Regla ngayon",
+  "Period Diaryod today": "Regla ngayon",
   edit: "Baguhin",
   save: "I-save",
-  "Period is": "Regla ay",
+  "Period Diaryod is": "Regla ay",
   "possible today": "Posibleng ngayon",
   // Details Tab
   Details: "Detalye",
-  "Period length": "Haba ng regla",
+  "Period Diaryod length": "Haba ng regla",
   "Cycle length": "Haba ng siklo",
-  "You haven't marked any periods yet": "Wala ka pang naitalang regla",
+  "You haven't marked any Period Diaryods yet": "Wala ka pang naitalang regla",
   // Mark Modal
   mark: "Markahan",
   cancel: "Kanselahin",
   // Welcome Modal
-  "Welcome to Peri": "Maligayang pagdating sa Peri",
+  "Welcome to Period Diary": "Maligayang pagdating sa Period Diary",
   "Mark the days of your": "Markahan ang mga araw ng iyong",
-  "last period": "huling regla",
+  "last Period Diaryod": "huling regla",
   Continue: "Magpatuloy",
   "Forecast will not be generated.": "Ang pagtataya ay hindi bubuo.",
   or: "o",
@@ -68,7 +68,7 @@ const tl = {
   "characteristic secretions": "mga katangiang sekretisyon",
 
   "Luteal phase": "Yugtong luteal",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Ang mga antas ng hormons na estrogen at progesterone ay unang tumataas at pagkatapos ay biglang bumababa bago ang regla. Ang progesterone ay umabot sa rurok nito sa yugto ng luteal.",
   "breast tenderness": "Pananakit ng dibdib",
   puffiness: "pamamaga",

@@ -1,9 +1,9 @@
 const fi = {
   // Home Tab
   Home: "Aloitus",
-  "Period in": "Kuukautisten alkuun",
+  "Period Diaryod in": "Kuukautisten alkuun",
   "no info": "ei tietoja",
-  Period: "Kuukautiset",
+  Period Diaryod: "Kuukautiset",
   today: "tänään",
   Delay: "Myöhässä",
   Days: "(0)[päivää];(1)[päivä];(2-inf)[päivää];",
@@ -17,23 +17,23 @@ const fi = {
   "chance of getting pregnant": "mahdollisuus tulla raskaaksi",
   High: "Suuri",
   Low: "Pieni",
-  "Period today": "Kuukautiset tänään",
+  "Period Diaryod today": "Kuukautiset tänään",
   edit: "Muokkaa",
   save: "Tallenna",
-  "Period is": "Kuukautiset",
+  "Period Diaryod is": "Kuukautiset",
   "possible today": "saattavat alkaa tänään",
   // Details Tab
   Details: "Tiedot",
-  "Period length": "Kuukautisten kesto",
+  "Period Diaryod length": "Kuukautisten kesto",
   "Cycle length": "Kierron kesto",
-  "You haven't marked any periods yet": "Et ole vielä merkinnyt kuukautisia",
+  "You haven't marked any Period Diaryods yet": "Et ole vielä merkinnyt kuukautisia",
   // Mark Modal
   mark: "Merkitse",
   cancel: "Peruuta",
   // Welcome Modal
-  "Welcome to Peri": "Tervetuloa Peri-sovellukseen",
+  "Welcome to Period Diary": "Tervetuloa Period Diary-sovellukseen",
   "Mark the days of your": "Merkitse tähän",
-  "last period": "edellisten kuukautistesi ajankohta",
+  "last Period Diaryod": "edellisten kuukautistesi ajankohta",
   Continue: "Jatka",
   "Forecast will not be generated.": "Ennustetta ei luoda.",
   or: "tai",
@@ -68,7 +68,7 @@ const fi = {
   "characteristic secretions ": "tunnusomainen valkovuoto",
 
   "Luteal phase": "Luteaalivaihe",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Estrogeeni- ja progesteronitasot ensin nousevat ja sitten laskevat jyrkästi juuri ennen kuukautisia. Progesteronitasot ovat korkeimmillaan luteaalivaiheessa.",
   "breast tenderness": "rintojen arkuus",
   puffiness: "turvotus",

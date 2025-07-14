@@ -1,9 +1,9 @@
 const ta = {
   // Home Tab
   Home: "முகப்பு",
-  "Period in": "மாதவிடாய் காலம்",
+  "Period Diaryod in": "மாதவிடாய் காலம்",
   "no info": "தகவல் இல்லை",
-  Period: "மாதவிடாய்",
+  Period Diaryod: "மாதவிடாய்",
   today: "இன்று",
   Delay: "தாமதம்",
   Days: "(0-inf)[நாள்];",
@@ -17,17 +17,17 @@ const ta = {
   "chance of getting pregnant": "கர்ப்பம் தரிக்கும் வாய்ப்பு",
   High: "உயர்",
   Low: "குறைந்த",
-  "Period today": "இன்று மாதவிடாய்",
+  "Period Diaryod today": "இன்று மாதவிடாய்",
   edit: "திருத்தவும்",
   save: "சேமிக்கவும்",
-  "Period is": "மாதவிடாய்",
+  "Period Diaryod is": "மாதவிடாய்",
   "possible today": "வாய்ப்பு இன்று உள்ளது",
 
   // Details Tab
   Details: "விவரங்கள்",
-  "Period length": "மாதவிடாய் காலம்",
+  "Period Diaryod length": "மாதவிடாய் காலம்",
   "Cycle length": "சுழற்சி காலம்",
-  "You haven't marked any periods yet":
+  "You haven't marked any Period Diaryods yet":
     "நீங்கள் இன்னும் எந்த மாதவிடாய்களையும் அடையாளப்படுத்தவில்லை",
 
   // Mark Modal
@@ -35,9 +35,9 @@ const ta = {
   cancel: "ரத்துசெய்யவும்",
 
   // Welcome Modal
-  "Welcome to Peri": "Peri-யில் உங்களை வரவேற்கிறோம்",
+  "Welcome to Period Diary": "Period Diary-யில் உங்களை வரவேற்கிறோம்",
   "Mark the days of your": "உங்கள் நாட்களை அடையாளப்படுத்தவும்",
-  "last period": "கடைசியாக மாதவிடாய்",
+  "last Period Diaryod": "கடைசியாக மாதவிடாய்",
   Continue: "தொடரவும்",
   "Forecast will not be generated.": "முன்னறிவிப்பு உருவாக்கப்படாது.",
   or: "அல்லது",
@@ -74,7 +74,7 @@ const ta = {
   "chest discomfort and bloating": "நெஞ்சு வலி மற்றும் வயிற்று வீக்கம்",
 
   "Luteal phase": "லூடியல் கட்டம்",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "ஹார்மோன்கள் எஸ்ட்ரோஜன் மற்றும் புரஜெஸ்டரோன் முதலில் உயர்ந்து அதன் பின்னர் திடமாக குறைந்து விடும். புரஜெஸ்டரோன் அதன் உச்சத்தை லூடியல் கட்டத்தில் எட்டுகிறது.",
   "breast tenderness": "பாலுத்தின்மையை உணர்தல்",
   puffiness: "பவுனிப்பாடு",

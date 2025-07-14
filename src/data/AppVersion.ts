@@ -7,7 +7,7 @@ export interface GithubReleaseAsset {
   browser_download_url: string;
   // NOTE: Other fields are not significant
   //       You can see all fields with the following command:
-  //       `curl https://api.github.com/repos/IraSoro/peri/releases/latest`
+  //       `curl https://api.github.com/repos/IraSoro/Period Diary/releases/latest`
 }
 
 export interface GithubReleaseInfo {
@@ -17,7 +17,7 @@ export interface GithubReleaseInfo {
   assets: GithubReleaseAsset[];
   // NOTE: Other fields are not significant
   //       You can see all fields with the following command:
-  //       `curl https://api.github.com/repos/IraSoro/peri/releases/latest`
+  //       `curl https://api.github.com/repos/IraSoro/Period Diary/releases/latest`
 }
 
 export interface LatestReleaseInfo {
@@ -32,7 +32,7 @@ async function getLatestReleaseInfo(): Promise<LatestReleaseInfo> {
   } satisfies LatestReleaseInfo;
 
   const response = await fetch(
-    "https://api.github.com/repos/IraSoro/peri/releases/latest",
+    "https://api.github.com/repos/IraSoro/Period Diary/releases/latest",
   );
 
   const githubReleaseInfo = (await response.json()) as GithubReleaseInfo;
@@ -71,7 +71,7 @@ export async function downloadLatestRelease() {
   window.open(latestRelease.htmlUrl, "_system", "location=yes");
 }
 
-export const homepageURL = "https://github.com/IraSoro/peri";
+export const homepageURL = "https://github.com/IraSoro/Period Diary";
 export function openGitHubPage() {
   if (isPlatform("desktop")) {
     window.open(homepageURL, "_blank")?.focus();
@@ -81,7 +81,7 @@ export function openGitHubPage() {
 }
 
 export function openCurrentReleasePage() {
-  const lastReleaseURL = `https://github.com/IraSoro/peri/releases/tag/${configuration.app.version}`;
+  const lastReleaseURL = `https://github.com/IraSoro/Period Diary/releases/tag/${configuration.app.version}`;
 
   if (isPlatform("desktop")) {
     window.open(lastReleaseURL, "_blank")?.focus();

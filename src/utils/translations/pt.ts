@@ -1,11 +1,11 @@
 const pt = {
   // Home Tab
   Home: "Inicio",
-  "Period in": "Menstruação em", // eg. Period in 5 Days
+  "Period Diaryod in": "Menstruação em", // eg. Period Diaryod in 5 Days
   "no info": "sem informação",
-  Period: "Menstruação", // eg. Period today
+  Period Diaryod: "Menstruação", // eg. Period Diaryod today
   today: "hoje",
-  Delay: "Atrasada", // mean Period Delay
+  Delay: "Atrasada", // mean Period Diaryod Delay
   Days: "Dias", // eg. "(0)[Days];(1)[Day];(2-inf)[Days];"
   "Current cycle day": "Dia do ciclo atual",
 
@@ -18,35 +18,35 @@ const pt = {
   // day_ordinal_two: "{{count}}nd day",
   // day_ordinal_few: "{{count}}rd day",
   // day_ordinal_other: "{{count}}th day",
-  day: "{{count}}º dia", // eg. Period - 1st day
+  day: "{{count}}º dia", // eg. Period Diaryod - 1st day
   Ovulation: "Ovulação",
   possible: "possível", // eg. Ovulation - possible
   finished: "terminou", // eg. Ovulation - finished
   tomorrow: "amanhã", // eg. Ovulation - tomorrow
-  in: "em", // eg. Period in 5 Days
+  in: "em", // eg. Period Diaryod in 5 Days
   "chance of getting pregnant": "chance de engravidar", // eg. High/Low chance of getting pregnant
   High: "Alta",
   Low: "Baixa",
-  "Period today": "Menstruação hoje",
+  "Period Diaryod today": "Menstruação hoje",
   edit: "editar",
   save: "salvar",
-  "Period is": "A menstruação", // eg. Period is possible today
+  "Period Diaryod is": "A menstruação", // eg. Period Diaryod is possible today
   "possible today": "desce hoje",
 
   // Details Tab
   Details: "Detalhes",
-  "Period length": "Duração do período", // eg. Period length - 5 Days
+  "Period Diaryod length": "Duração do período", // eg. Period Diaryod length - 5 Days
   "Cycle length": "Duração do ciclo", // eg. Cycle length - 25 Days
-  "You haven't marked any periods yet": "Você não marcou nenhum período ainda",
+  "You haven't marked any Period Diaryods yet": "Você não marcou nenhum período ainda",
 
   // Mark Modal
-  mark: "marque", // eg. mark your period
+  mark: "marque", // eg. mark your Period Diaryod
   cancel: "cancelar",
 
   // Welcome Modal
-  "Welcome to Peri": "Bem-vinda ao Peri",
-  "Mark the days of your": "Selecione os dias do seu", // eg. Mark the days of your last period
-  "last period": "último período", // eg. Mark the days of your last period
+  "Welcome to Period Diary": "Bem-vinda ao Period Diary",
+  "Mark the days of your": "Selecione os dias do seu", // eg. Mark the days of your last Period Diaryod
+  "last Period Diaryod": "último período", // eg. Mark the days of your last Period Diaryod
   Continue: "Continuar",
   "Forecast will not be generated.": "A previsão não será gerada",
   or: "ou",
@@ -83,7 +83,7 @@ const pt = {
   "characteristic secretions ": "secreções caracteristicas",
 
   "Luteal phase": "Fase lútea",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Os níveis dos hormônios estrogênio e progesterona primeiro aumentam e depois caem drasticamente pouco antes da menstruação. A progesterona atinge seu pico na fase lútea.",
   "breast tenderness": "sensibilidade mamária",
   puffiness: "inchaço",
@@ -110,9 +110,9 @@ const pt = {
 
   // Notifications
   Notifications: "Notificações",
-  "Period is coming soon": "Sua menstruação está próxima",
-  "Your period may start tomorrow": "Sua menstruação talvez comece amanhã",
-  "Your period may start today": "Sua menstruação talvez comece hoje",
+  "Period Diaryod is coming soon": "Sua menstruação está próxima",
+  "Your Period Diaryod may start tomorrow": "Sua menstruação talvez comece amanhã",
+  "Your Period Diaryod may start today": "Sua menstruação talvez comece hoje",
 
   //Count stored cycles
   "Confirm selection": "Confirme sua seleção",

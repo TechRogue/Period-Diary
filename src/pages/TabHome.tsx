@@ -36,15 +36,15 @@ import InfoModal from "../modals/InfoModal";
 
 import {
   getPregnancyChance,
-  getDaysBeforePeriod,
+  getDaysBeforePeriod Diaryod,
   getNewCyclesHistory,
-  getPeriodDates,
+  getPeriod DiaryodDates,
   getActiveDates,
-  getPeriodDatesWithNewElement,
-  isPeriodToday,
-  getForecastPeriodDates,
+  getPeriod DiaryodDatesWithNewElement,
+  isPeriod DiaryodToday,
+  getForecastPeriod DiaryodDates,
   getOvulationDates,
-  getPeriodDatesOfLastCycle,
+  getPeriod DiaryodDatesOfLastCycle,
 } from "../state/CalculationLogics";
 import { getCurrentTranslation } from "../utils/translation";
 import { format } from "../utils/datetime";
@@ -118,14 +118,14 @@ const ViewCalendar = (props: SelectCalendarProps) => {
   const maxNumberOfDisplayedCycles =
     useContext(SettingsContext).maxNumberOfDisplayedCycles;
 
-  const periodDates = getPeriodDates(cycles, maxNumberOfDisplayedCycles);
-  const forecastPeriodDates = getForecastPeriodDates(
+  const Period DiaryodDates = getPeriod DiaryodDates(cycles, maxNumberOfDisplayedCycles);
+  const forecastPeriod DiaryodDates = getForecastPeriod DiaryodDates(
     cycles,
     maxNumberOfDisplayedCycles,
   );
   const ovulationDates = getOvulationDates(cycles, maxNumberOfDisplayedCycles);
 
-  const firstPeriodDay = periodDates
+  const firstPeriod DiaryodDay = Period DiaryodDates
     .sort((left, right) => {
       const leftDate = new Date(left);
       const rightDate = new Date(right);
@@ -133,13 +133,13 @@ const ViewCalendar = (props: SelectCalendarProps) => {
     })
     .at(0);
 
-  const firstPeriodDayDate = firstPeriodDay
-    ? parseISO(firstPeriodDay)
+  const firstPeriod DiaryodDayDate = firstPeriod DiaryodDay
+    ? parseISO(firstPeriod DiaryodDay)
     : startOfToday();
 
-  const minDate = formatISO(startOfMonth(firstPeriodDayDate));
+  const minDate = formatISO(startOfMonth(firstPeriod DiaryodDayDate));
 
-  const lastForecastPeriodDay = forecastPeriodDates
+  const lastForecastPeriod DiaryodDay = forecastPeriod DiaryodDates
     .sort((left, right) => {
       const leftDate = new Date(left);
       const rightDate = new Date(right);
@@ -147,12 +147,12 @@ const ViewCalendar = (props: SelectCalendarProps) => {
     })
     .at(-1);
 
-  const lastForecastPeriodDayDate = lastForecastPeriodDay
-    ? endOfMonth(parseISO(lastForecastPeriodDay))
+  const lastForecastPeriod DiaryodDayDate = lastForecastPeriod DiaryodDay
+    ? endOfMonth(parseISO(lastForecastPeriod DiaryodDay))
     : endOfMonth(startOfToday());
 
   const maxDate = formatISO(
-    endOfMonth(max([lastForecastPeriodDayDate, addMonths(startOfToday(), 6)])),
+    endOfMonth(max([lastForecastPeriod DiaryodDayDate, addMonths(startOfToday(), 6)])),
   );
 
   return (
@@ -173,7 +173,7 @@ const ViewCalendar = (props: SelectCalendarProps) => {
         if (cycles.length === 0) {
           return undefined;
         }
-        if (forecastPeriodDates.includes(isoDateString)) {
+        if (forecastPeriod DiaryodDates.includes(isoDateString)) {
           if (theme === "dark") {
             return {
               textColor: `#ffffff`,
@@ -184,7 +184,7 @@ const ViewCalendar = (props: SelectCalendarProps) => {
             textColor: `var(--ion-color-dark-${theme})`,
             backgroundColor: `rgba(var(--ion-color-light-${theme}-rgb), 0.3)`,
           };
-        } else if (periodDates.includes(isoDateString)) {
+        } else if (Period DiaryodDates.includes(isoDateString)) {
           return theme === "dark"
             ? {
                 textColor: `#ffffff`,
@@ -236,39 +236,39 @@ const EditCalendar = (props: SelectCalendarProps) => {
 
   // and then in the useEffect I update this value to the required ones
   useEffect(() => {
-    setDatesValue(getPeriodDates(cycles, maxNumberOfDisplayedCycles));
+    setDatesValue(getPeriod DiaryodDates(cycles, maxNumberOfDisplayedCycles));
   }, [cycles, maxNumberOfDisplayedCycles]);
 
-  const periodDays = getPeriodDates(cycles, maxNumberOfDisplayedCycles);
-  const lastPeriodDays = getPeriodDatesOfLastCycle(cycles);
+  const Period DiaryodDays = getPeriod DiaryodDates(cycles, maxNumberOfDisplayedCycles);
+  const lastPeriod DiaryodDays = getPeriod DiaryodDatesOfLastCycle(cycles);
 
-  const sortedPeriodDays = periodDays.sort((left, right) => {
+  const sortedPeriod DiaryodDays = Period DiaryodDays.sort((left, right) => {
     const leftDate = new Date(left);
     const rightDate = new Date(right);
     return leftDate.getTime() - rightDate.getTime();
   });
 
-  const firstPeriodDay = sortedPeriodDays.at(0);
-  const lastPeriodDay = sortedPeriodDays.at(-1);
+  const firstPeriod DiaryodDay = sortedPeriod DiaryodDays.at(0);
+  const lastPeriod DiaryodDay = sortedPeriod DiaryodDays.at(-1);
 
-  const firstPeriodDayDate = firstPeriodDay
-    ? parseISO(firstPeriodDay)
+  const firstPeriod DiaryodDayDate = firstPeriod DiaryodDay
+    ? parseISO(firstPeriod DiaryodDay)
     : startOfToday();
 
-  const lastPeriodDayDate = lastPeriodDay
-    ? parseISO(lastPeriodDay)
+  const lastPeriod DiaryodDayDate = lastPeriod DiaryodDay
+    ? parseISO(lastPeriod DiaryodDay)
     : startOfToday();
 
   const minDate = formatISO(
     startOfMonth(
       min([
-        firstPeriodDayDate,
+        firstPeriod DiaryodDayDate,
         subMonths(startOfToday(), maxNumberOfDisplayedCycles),
       ]),
     ),
   );
 
-  const maxDate = formatISO(max([startOfToday(), lastPeriodDayDate]));
+  const maxDate = formatISO(max([startOfToday(), lastPeriod DiaryodDayDate]));
 
   return (
     <IonDatetime
@@ -305,25 +305,25 @@ const EditCalendar = (props: SelectCalendarProps) => {
             let markedDays = (datetimeRef.current?.value as string[]) ?? [];
             const todayFormatted = format(startOfToday(), "yyyy-MM-dd");
 
-            // NOTE: If "lastPeriodDays" includes today, but the marked days don't,
-            //       it means that the user has unmarked the first day of a new period
+            // NOTE: If "lastPeriod DiaryodDays" includes today, but the marked days don't,
+            //       it means that the user has unmarked the first day of a new Period Diaryod
             //       that started today
             //       In this case we thinking that user marked first day of cycle by error
-            //       and remove the last period from the cycles array
+            //       and remove the last Period Diaryod from the cycles array
             if (
-              lastPeriodDays.includes(todayFormatted) &&
+              lastPeriod DiaryodDays.includes(todayFormatted) &&
               !markedDays.includes(todayFormatted)
             ) {
               markedDays = markedDays.filter((isoDateString) => {
-                return !lastPeriodDays.includes(isoDateString);
+                return !lastPeriod DiaryodDays.includes(isoDateString);
               });
             }
 
-            const periodDaysString = markedDays.map((isoDateString) => {
+            const Period DiaryodDaysString = markedDays.map((isoDateString) => {
               return parseISO(isoDateString).toString();
             });
 
-            updateCycles(getNewCyclesHistory(periodDaysString));
+            updateCycles(getNewCyclesHistory(Period DiaryodDaysString));
             props.setIsEditCalendar(false);
           }}
         >
@@ -347,7 +347,7 @@ const DemoAlert = () => {
         <h1>{t("This is just a demo")}</h1>
         <p>
           <span>{t("You can download the application ")}</span>
-          <a href="https://github.com/IraSoro/peri/releases/latest">
+          <a href="https://github.com/IraSoro/Period Diary/releases/latest">
             {t("here")}
           </a>
         </p>
@@ -436,7 +436,7 @@ const TabHome = () => {
                   }}
                 >
                   {
-                    getDaysBeforePeriod(cycles, maxNumberOfDisplayedCycles)
+                    getDaysBeforePeriod Diaryod(cycles, maxNumberOfDisplayedCycles)
                       .title
                   }
                 </p>
@@ -461,7 +461,7 @@ const TabHome = () => {
                         }
                   }
                 >
-                  {getDaysBeforePeriod(cycles, maxNumberOfDisplayedCycles).days}
+                  {getDaysBeforePeriod Diaryod(cycles, maxNumberOfDisplayedCycles).days}
                 </p>
               </IonLabel>
             </div>
@@ -475,10 +475,10 @@ const TabHome = () => {
                 className="main"
                 mode="md"
                 color={`dark-${theme}`}
-                disabled={isPeriodToday(cycles)}
+                disabled={isPeriod DiaryodToday(cycles)}
                 onClick={() => {
                   const newCycles = getNewCyclesHistory(
-                    getPeriodDatesWithNewElement(
+                    getPeriod DiaryodDatesWithNewElement(
                       cycles,
                       maxNumberOfDisplayedCycles,
                     ),

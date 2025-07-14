@@ -2,7 +2,7 @@ import { Storage, Drivers } from "@ionic/storage";
 import { Preferences } from "@capacitor/preferences";
 import { addDays, startOfToday, subDays } from "date-fns";
 import type { Cycle } from "./ClassCycle";
-import { getAverageLengthOfPeriod } from "../state/CalculationLogics";
+import { getAverageLengthOfPeriod Diaryod } from "../state/CalculationLogics";
 
 export interface Context {
   cycles: Cycle[];
@@ -34,7 +34,7 @@ type StorageValueTypeMap = {
 type StorageValueType<K extends StorageKey> = StorageValueTypeMap[K];
 
 const storageImplOld = new Storage({
-  name: "PeriodDB",
+  name: "Period DiaryodDB",
   driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage],
 });
 
@@ -231,7 +231,7 @@ export async function migrateToTheNewStorage() {
 //       for use just uncomment one of the following lines:
 
 // _emptyArrayOfCycles().catch((err) => console.error(err));
-// _todayPeriod(8).catch((err) => console.error(err));
+// _todayPeriod Diaryod(8).catch((err) => console.error(err));
 // _todayOvulation(8).catch((err) => console.error(err));
 // _tomorrowOvulation(8).catch((err) => console.error(err));
 // _menstrualPhase(8).catch((err) => console.error(err));
@@ -249,7 +249,7 @@ function _emptyArrayOfCycles() {
   });
 }
 
-function _todayPeriod(countOfCycles: number) {
+function _todayPeriod Diaryod(countOfCycles: number) {
   const cycles: Cycle[] = [];
   let date = startOfToday();
 
@@ -258,7 +258,7 @@ function _todayPeriod(countOfCycles: number) {
 
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -278,7 +278,7 @@ function _todayOvulation(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -298,7 +298,7 @@ function _tomorrowOvulation(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -318,7 +318,7 @@ function _menstrualPhase(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -338,7 +338,7 @@ function _follicularPhase(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -358,7 +358,7 @@ function _lutealPhase(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -378,7 +378,7 @@ function _delayOfCycle(countOfCycles: number) {
     date = subDays(date, 28);
     cycles.push({
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: date.toString(),
     });
   }
@@ -405,14 +405,14 @@ function _randomMenstrualPhase(countOfCycles: number) {
     date = subDays(date, cycleLength);
     cycles.push({
       cycleLength: cycleLength,
-      periodLength: random(4, 6),
+      Period DiaryodLength: random(4, 6),
       startDate: date.toString(),
     });
   }
 
   if (countOfCycles > 1) {
-    const averagePeriod = getAverageLengthOfPeriod(cycles, countOfCycles - 2);
-    cycles[0].periodLength = averagePeriod;
+    const averagePeriod Diaryod = getAverageLengthOfPeriod Diaryod(cycles, countOfCycles - 2);
+    cycles[0].Period DiaryodLength = averagePeriod Diaryod;
     cycles[0].cycleLength = 0;
   }
 
@@ -428,14 +428,14 @@ function _randomFollicularPhase(countOfCycles: number) {
     date = subDays(date, cycleLength);
     cycles.push({
       cycleLength: cycleLength,
-      periodLength: random(4, 6),
+      Period DiaryodLength: random(4, 6),
       startDate: date.toString(),
     });
   }
 
   if (countOfCycles > 1) {
-    const averagePeriod = getAverageLengthOfPeriod(cycles, countOfCycles - 2);
-    cycles[0].periodLength = averagePeriod;
+    const averagePeriod Diaryod = getAverageLengthOfPeriod Diaryod(cycles, countOfCycles - 2);
+    cycles[0].Period DiaryodLength = averagePeriod Diaryod;
     cycles[0].cycleLength = 0;
   }
 
@@ -451,14 +451,14 @@ function _randomLutealPhase(countOfCycles: number) {
     date = subDays(date, cycleLength);
     cycles.push({
       cycleLength: cycleLength,
-      periodLength: random(4, 6),
+      Period DiaryodLength: random(4, 6),
       startDate: date.toString(),
     });
   }
 
   if (countOfCycles > 1) {
-    const averagePeriod = getAverageLengthOfPeriod(cycles, countOfCycles - 2);
-    cycles[0].periodLength = averagePeriod;
+    const averagePeriod Diaryod = getAverageLengthOfPeriod Diaryod(cycles, countOfCycles - 2);
+    cycles[0].Period DiaryodLength = averagePeriod Diaryod;
     cycles[0].cycleLength = 0;
   }
 
@@ -474,14 +474,14 @@ function _randomDelayOfCycle(countOfCycles: number) {
     date = subDays(date, cycleLength);
     cycles.push({
       cycleLength: cycleLength,
-      periodLength: random(4, 6),
+      Period DiaryodLength: random(4, 6),
       startDate: date.toString(),
     });
   }
 
   if (countOfCycles > 1) {
-    const averagePeriod = getAverageLengthOfPeriod(cycles, countOfCycles - 2);
-    cycles[0].periodLength = averagePeriod;
+    const averagePeriod Diaryod = getAverageLengthOfPeriod Diaryod(cycles, countOfCycles - 2);
+    cycles[0].Period DiaryodLength = averagePeriod Diaryod;
     cycles[0].cycleLength = 0;
   }
 

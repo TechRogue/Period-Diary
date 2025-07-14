@@ -1,9 +1,9 @@
 const fr = {
   // Home Tab
   Home: "Accueil",
-  "Period in": "Règles dans",
+  "Period Diaryod in": "Règles dans",
   "no info": "inconnu",
-  Period: "Règles",
+  Period Diaryod: "Règles",
   today: "aujourd'hui",
   Delay: "Retard",
   Days: "(0)[Jour];(1)[Jour];(2-inf)[Jours];",
@@ -18,24 +18,24 @@ const fr = {
   "chance of getting pregnant": "probabilité de tomber enceinte",
   High: "Élevée",
   Low: "Faible",
-  "Period today": "Règles aujourd'hui",
+  "Period Diaryod today": "Règles aujourd'hui",
   edit: "modifier",
   save: "enregistrer",
-  "Period is": "Les règles sont",
+  "Period Diaryod is": "Les règles sont",
   "possible today": "possibles aujourd'hui",
   // Details Tab
   Details: "Détails",
-  "Period length": "Durée des règles",
+  "Period Diaryod length": "Durée des règles",
   "Cycle length": "Durée du cycle",
-  "You haven't marked any periods yet":
+  "You haven't marked any Period Diaryods yet":
     "Vous n'avez pas encore marqué de jours de règles",
   // Mark Modal
   mark: "marquer",
   cancel: "annuler",
   // Welcome Modal
-  "Welcome to Peri": "Bienvenue sur Peri",
+  "Welcome to Period Diary": "Bienvenue sur Period Diary",
   "Mark the days of your": "Marquez les jours de vos",
-  "last period": "dernières règles",
+  "last Period Diaryod": "dernières règles",
   Continue: "Continuer",
   "Forecast will not be generated.": "La prévision ne sera pas générée.",
   or: "ou",
@@ -70,7 +70,7 @@ const fr = {
   "characteristic secretions": "sécrétions caractéristiques",
 
   "Luteal phase": "Phase lutéale",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Les niveaux des hormones œstrogène et progestérone augmentent d'abord puis chutent brusquement juste avant les règles. La progestérone atteint son pic dans la phase lutéale.",
   "breast tenderness": "sensibilité des seins",
   puffiness: "gonflement",

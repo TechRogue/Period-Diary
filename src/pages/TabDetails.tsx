@@ -12,7 +12,7 @@ import { addDays, startOfDay } from "date-fns";
 
 import {
   getAverageLengthOfCycle,
-  getAverageLengthOfPeriod,
+  getAverageLengthOfPeriod Diaryod,
   getDayOfCycle,
   getLastStartDate,
 } from "../state/CalculationLogics";
@@ -25,7 +25,7 @@ import "./TabDetails.css";
 interface InfoOneCycle {
   lengthOfCycleString: string;
   lengthOfCycleNumber: number;
-  lengthOfPeriod: number;
+  lengthOfPeriod Diaryod: number;
   dates: string;
 }
 
@@ -39,7 +39,7 @@ function useInfoForOneCycle(idx: number): InfoOneCycle {
     return {
       lengthOfCycleNumber: defaultLengthOfCycle,
       lengthOfCycleString: t("Cycle length"),
-      lengthOfPeriod: 0,
+      lengthOfPeriod Diaryod: 0,
       dates: "",
     };
   }
@@ -49,7 +49,7 @@ function useInfoForOneCycle(idx: number): InfoOneCycle {
     count: cycleLenNumber,
   })}`;
 
-  const periodLenNumber: number = cycles[idx].periodLength;
+  const Period DiaryodLenNumber: number = cycles[idx].Period DiaryodLength;
 
   const startDate = startOfDay(new Date(cycles[idx].startDate));
   const endDate = addDays(startDate, cycleLenNumber - 1);
@@ -58,7 +58,7 @@ function useInfoForOneCycle(idx: number): InfoOneCycle {
   return {
     lengthOfCycleNumber: cycleLenNumber,
     lengthOfCycleString: cycleLenString,
-    lengthOfPeriod: periodLenNumber,
+    lengthOfPeriod Diaryod: Period DiaryodLenNumber,
     dates: dates,
   };
 }
@@ -96,7 +96,7 @@ const CurrentCycle = () => {
   })}`;
 
   const startDate = new Date(getLastStartDate(cycles));
-  const lengthOfPeriod = cycles[0].periodLength ?? 0;
+  const lengthOfPeriod Diaryod = cycles[0].Period DiaryodLength ?? 0;
 
   const maxLength = cycles.reduce((max: number, item) => {
     return Math.max(max, item.cycleLength);
@@ -111,7 +111,7 @@ const CurrentCycle = () => {
         className={`current-progress-${theme}`}
         style={progressBarStyle}
         value={setProgressBar(
-          lengthOfPeriod > dayOfCycle ? dayOfCycle : lengthOfPeriod,
+          lengthOfPeriod Diaryod > dayOfCycle ? dayOfCycle : lengthOfPeriod Diaryod,
           maxLength,
         )}
         buffer={setProgressBar(dayOfCycle, maxLength)}
@@ -151,7 +151,7 @@ const ListProgress = () => {
             mode="md"
             className={theme}
             style={progressBarStyle}
-            value={setProgressBar(info.lengthOfPeriod, maxLength)}
+            value={setProgressBar(info.lengthOfPeriod Diaryod, maxLength)}
             buffer={setProgressBar(info.lengthOfCycleNumber, maxLength)}
           />
           <IonLabel mode="md">
@@ -188,7 +188,7 @@ const AverageValues = ({ cycles }: AverageValuesProps) => {
     cycles,
     maxNumberOfDisplayedCycles,
   );
-  const averageLengthOfPeriod = getAverageLengthOfPeriod(
+  const averageLengthOfPeriod Diaryod = getAverageLengthOfPeriod Diaryod(
     cycles,
     maxNumberOfDisplayedCycles,
   );
@@ -198,9 +198,9 @@ const AverageValues = ({ cycles }: AverageValuesProps) => {
     count: averageLengthOfCycle,
   })}`;
 
-  const lengthOfPeriod = `${averageLengthOfPeriod} ${t("Days", {
+  const lengthOfPeriod Diaryod = `${averageLengthOfPeriod Diaryod} ${t("Days", {
     postProcess: "interval",
-    count: averageLengthOfPeriod,
+    count: averageLengthOfPeriod Diaryod,
   })}`;
 
   return (
@@ -229,9 +229,9 @@ const AverageValues = ({ cycles }: AverageValuesProps) => {
             mode="md"
           >
             <p className={`h_style-${theme}`}>
-              {averageLengthOfPeriod ? lengthOfPeriod : "---"}
+              {averageLengthOfPeriod Diaryod ? lengthOfPeriod Diaryod : "---"}
             </p>
-            <p className="p_style">{t("Period length")}</p>
+            <p className="p_style">{t("Period Diaryod length")}</p>
           </IonLabel>
         </div>
       </IonCol>
@@ -268,8 +268,8 @@ const TabDetails = () => {
                   {cycles.length > 1 && <ListProgress />}
                 </IonList>
               ) : (
-                <p className="no-periods">
-                  {t("You haven't marked any periods yet")}
+                <p className="no-Period Diaryods">
+                  {t("You haven't marked any Period Diaryods yet")}
                 </p>
               )}
             </div>

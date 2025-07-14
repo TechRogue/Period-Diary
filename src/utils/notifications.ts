@@ -1,7 +1,7 @@
 import { LocalNotifications } from "@capacitor/local-notifications";
 import i18n from "i18next";
 
-import { getPeriodShiftInDays } from "../state/CalculationLogics";
+import { getPeriod DiaryodShiftInDays } from "../state/CalculationLogics";
 import { Cycle } from "../data/ClassCycle";
 import { storage } from "../data/Storage";
 
@@ -67,29 +67,29 @@ export const createNotifications = async (
   try {
     const notificationsId1 = await getNextNotificationId();
     const notificationsId2 = await getNextNotificationId();
-    const dayBeforePeriod = getPeriodShiftInDays(
+    const dayBeforePeriod Diaryod = getPeriod DiaryodShiftInDays(
       cycles,
       -1,
       maxDisplayedCycles,
     );
-    const dayOfPeriod = getPeriodShiftInDays(cycles, 0, maxDisplayedCycles);
+    const dayOfPeriod Diaryod = getPeriod DiaryodShiftInDays(cycles, 0, maxDisplayedCycles);
 
     await LocalNotifications.schedule({
       notifications: [
         {
           id: notificationsId1,
-          title: i18n.t("Period is coming soon"),
-          body: i18n.t("Your period may start tomorrow"),
-          schedule: { at: dayBeforePeriod },
+          title: i18n.t("Period Diaryod is coming soon"),
+          body: i18n.t("Your Period Diaryod may start tomorrow"),
+          schedule: { at: dayBeforePeriod Diaryod },
           sound: "default",
           smallIcon: "ic_launcher",
           largeIcon: "ic_launcher",
         },
         {
           id: notificationsId2,
-          title: i18n.t("Period is coming soon"),
-          body: i18n.t("Your period may start today"),
-          schedule: { at: dayOfPeriod },
+          title: i18n.t("Period Diaryod is coming soon"),
+          body: i18n.t("Your Period Diaryod may start today"),
+          schedule: { at: dayOfPeriod Diaryod },
           sound: "default",
           smallIcon: "ic_launcher",
           largeIcon: "ic_launcher",

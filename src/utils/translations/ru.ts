@@ -1,9 +1,9 @@
 const ru = {
   // Home Tab
   Home: "Главная",
-  "Period in": "Месячные через",
+  "Period Diaryod in": "Месячные через",
   "no info": "неизвестно",
-  Period: "Месячные",
+  Period Diaryod: "Месячные",
   today: "сегодня",
   Delay: "Задержка",
   Days: "(0)[Дней];(1)[День];(2-4)[Дня];(5-20)[Дней];(21)[День];(22-24)[Дня];(25-30)[Дней];(31)[День];(32-34)[Дня];(35-inf)[Дней];",
@@ -17,23 +17,23 @@ const ru = {
   "chance of getting pregnant": "вероятность забеременеть",
   High: "Высокая",
   Low: "Низкая",
-  "Period today": "Месячные сегодня",
+  "Period Diaryod today": "Месячные сегодня",
   edit: "редактировать",
   save: "сохранить",
-  "Period is": "Месячные",
+  "Period Diaryod is": "Месячные",
   "possible today": "возможно сегодня",
   // Details Tab
   Details: "Детали",
-  "Period length": "Длина месячных",
+  "Period Diaryod length": "Длина месячных",
   "Cycle length": "Длина цикла",
-  "You haven't marked any periods yet": "Вы еще не отметили дни месячных",
+  "You haven't marked any Period Diaryods yet": "Вы еще не отметили дни месячных",
   // Mark Modal
   mark: "отметить",
   cancel: "отмена",
   // Welcome Modal
-  "Welcome to Peri": "Добро пожаловать в Peri",
+  "Welcome to Period Diary": "Добро пожаловать в Period Diary",
   "Mark the days of your": "Отметьте дни",
-  "last period": "последних месячных",
+  "last Period Diaryod": "последних месячных",
   Continue: "Продолжить",
   "Forecast will not be generated.": "Прогноз не будет сгенерирован.",
   or: "или",
@@ -68,7 +68,7 @@ const ru = {
   "characteristic secretions": "характерные выделения",
 
   "Luteal phase": "Лютеиновая фаза",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Уровни гормонов эстрогена и прогестерона сначала повышаются, а прямо перед менструацией резко падают. Прогестерон в лютеиновую фазу достигает своего пика.",
   "breast tenderness": "чувствительность груди",
   puffiness: "отечность",
@@ -93,9 +93,9 @@ const ru = {
   "We are on GitHub": "Мы в GitHub",
   // Notifications
   Notifications: "Оповещения",
-  "Period is coming soon": "Месячные скоро начнутся",
-  "Your period may start tomorrow": "Месячные могут начаться уже завтра",
-  "Your period may start today": "Месячные могут начаться уже сегодня",
+  "Period Diaryod is coming soon": "Месячные скоро начнутся",
+  "Your Period Diaryod may start tomorrow": "Месячные могут начаться уже завтра",
+  "Your Period Diaryod may start today": "Месячные могут начаться уже сегодня",
 
   //Count stored cycles
   "Confirm selection": "Подтвердите выбор",

@@ -1,9 +1,9 @@
 const vi = {
   // Home Tab
   Home: "Trang chủ",
-  "Period in": "Kỳ kinh nguyệt trong vòng",
+  "Period Diaryod in": "Kỳ kinh nguyệt trong vòng",
   "no info": "không có thông tin",
-  Period: "Kỳ kinh nguyệt",
+  Period Diaryod: "Kỳ kinh nguyệt",
   today: "hôm nay",
   Delay: "Bị chậm trễ",
   Days: "(0-inf)[ngày]",
@@ -17,23 +17,23 @@ const vi = {
   "chance of getting pregnant": "Khả năng có thai",
   High: "Cao",
   Low: "Thấp",
-  "Period today": "Kỳ kinh nguyệt hôm nay",
+  "Period Diaryod today": "Kỳ kinh nguyệt hôm nay",
   edit: "chỉnh sửa",
   save: "lưu lại",
-  "Period is": "Kỳ kinh nguyệt",
+  "Period Diaryod is": "Kỳ kinh nguyệt",
   "possible today": "có thể diễn ra vào hôm nay",
   // Details Tab
   Details: "Chi tiết",
-  "Period length": "Độ dài của kỳ kinh nguyệt",
+  "Period Diaryod length": "Độ dài của kỳ kinh nguyệt",
   "Cycle length": "Độ dài của chu kỳ kinh nguyệt",
-  "You haven't marked any periods yet": "Bạn chưa đánh dấu chu kỳ nào",
+  "You haven't marked any Period Diaryods yet": "Bạn chưa đánh dấu chu kỳ nào",
   // Mark Modal
   mark: "đánh dấu",
   cancel: "huỷ bỏ",
   // Welcome Modal
-  "Welcome to Peri": "Chào mừng bạn đến với Peri",
+  "Welcome to Period Diary": "Chào mừng bạn đến với Period Diary",
   "Mark the days of your": "Bạn hãy đánh dấu những ngày",
-  "last period": "kỳ kinh nguyệt gần nhất của bạn",
+  "last Period Diaryod": "kỳ kinh nguyệt gần nhất của bạn",
   Continue: "Tiếp tục",
   "Forecast will not be generated.": "Dự báo sẽ không được sinh ra.",
   or: "hoặc",
@@ -68,7 +68,7 @@ const vi = {
   "characteristic secretions": "Bài tiết đặc trưng",
 
   "Luteal phase": "Giai đoạn Hoàng Thể",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
     "Mức độ của các nội tiết tố estrogen và progesterone tăng vào lúc đầu, sau đó đột ngột giảm mạnh ngay trước một kỳ kinh nguyệt. Progesterone đạt đỉnh vào giai đoạn Hoàng Thể.",
   "breast tenderness": "Đau ngực",
   puffiness: "Phù nề",

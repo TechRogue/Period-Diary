@@ -7,7 +7,7 @@ import { Context } from "./Storage";
 export type Config = Context & { version: number };
 
 const configVersion = 1;
-const configFilename = "peri.json";
+const configFilename = "Period Diary.json";
 
 export async function importConfig(): Promise<Config> {
   return new Promise<Config>((resolve, reject) => {

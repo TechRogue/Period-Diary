@@ -20,7 +20,7 @@ it("setCycles", async () => {
   const cycles = [
     {
       cycleLength: 28,
-      periodLength: 6,
+      Period DiaryodLength: 6,
       startDate: "2023-05-31",
     },
   ];
@@ -48,7 +48,7 @@ describe("getCycles", () => {
     const cycles = [
       {
         cycleLength: 28,
-        periodLength: 6,
+        Period DiaryodLength: 6,
         startDate: "2023-05-31",
       },
     ];

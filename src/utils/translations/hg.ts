@@ -1,9 +1,9 @@
 const hg = {
   // Home Tab
   Home: "Ghar",
-  "Period in": "Period mein",
+  "Period Diaryod in": "Period Diaryod mein",
   "no info": "Unknown",
-  Period: "Period",
+  Period Diaryod: "Period Diaryod",
   today: "Aaj",
   Delay: "Delay",
   Days: "(0)[Din];(1)[Din];(2-4)[Din];(5-20)[Din];(21)[Din];(22-24)[Din];(25-30)[Din];(31)[Din];(32-34)[Din];(35-40)[Din];",
@@ -17,24 +17,24 @@ const hg = {
   "chance of getting pregnant": "Pregnant hone ka chance",
   High: "Zyada",
   Low: "Kam",
-  "Period today": "Aaj period",
+  "Period Diaryod today": "Aaj Period Diaryod",
   edit: "Edit karo",
   save: "Save karo",
-  "Period is": "Period hai",
+  "Period Diaryod is": "Period Diaryod hai",
   "possible today": "Aaj possible hai",
   // Details Tab
   Details: "Details",
-  "Period length": "Period ka duration",
+  "Period Diaryod length": "Period Diaryod ka duration",
   "Cycle length": "Cycle ka duration",
-  "You haven't marked any periods yet":
-    "Aapne ab tak koi period mark nahi kiya hai",
+  "You haven't marked any Period Diaryods yet":
+    "Aapne ab tak koi Period Diaryod mark nahi kiya hai",
   // Mark Modal
   mark: "Mark karo",
   cancel: "Cancel karo",
   // Welcome Modal
-  "Welcome to Peri": "Peri mein swagat hai",
+  "Welcome to Period Diary": "Period Diary mein swagat hai",
   "Mark the days of your": "Apne dinon ko mark karo",
-  "last period": "Aakhri period",
+  "last Period Diaryod": "Aakhri Period Diaryod",
   Continue: "Aage badho",
   "Forecast will not be generated.": "Forecast nahi banega.",
   or: "ya",
@@ -69,8 +69,8 @@ const hg = {
   "characteristic secretions": "Special secretions",
 
   "Luteal phase": "Luteal phase",
-  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a period. Progesterone reaches its peak in the luteal phase.":
-    "Estrogen aur progesterone hormones ka level pehle badhta hai, fir period se thoda pehle sharply girta hai. Luteal phase mein progesterone apne peak par hota hai.",
+  "Levels of the hormones estrogen and progesterone first rise and then drop sharply just before a Period Diaryod. Progesterone reaches its peak in the luteal phase.":
+    "Estrogen aur progesterone hormones ka level pehle badhta hai, fir Period Diaryod se thoda pehle sharply girta hai. Luteal phase mein progesterone apne peak par hota hai.",
   "breast tenderness": "Seene mein dard",
   puffiness: "Sujan",
   "acne and skin rashes": "Acne aur skin rashes",

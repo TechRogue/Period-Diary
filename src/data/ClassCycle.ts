@@ -1,6 +1,6 @@
 interface Cycle {
   cycleLength: number;
-  periodLength: number;
+  Period DiaryodLength: number;
   startDate: string;
 }
 

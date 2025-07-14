@@ -52,7 +52,7 @@ const Welcome = (props: PropsWelcomeModal) => {
             style={{ fontSize: "30px", marginTop: "20px" }}
             mode="md"
           >
-            {t("Welcome to Peri")}
+            {t("Welcome to Period Diary")}
           </IonLabel>
         </div>
         <div style={{ marginTop: "20px", marginBottom: "25px" }}>
@@ -75,7 +75,7 @@ const Welcome = (props: PropsWelcomeModal) => {
                 fontWeight: "600",
               }}
             >
-              {t("last period")}
+              {t("last Period Diaryod")}
             </p>
           </IonLabel>
         </div>
@@ -103,13 +103,13 @@ const Welcome = (props: PropsWelcomeModal) => {
             color={`dark-${theme}`}
             onClick={() => {
               if (datetimeRef.current?.value) {
-                const periodDaysString = (
+                const Period DiaryodDaysString = (
                   datetimeRef.current.value as string[]
                 ).map((isoDateString) => {
                   return parseISO(isoDateString).toString();
                 });
 
-                updateCycles(getNewCyclesHistory(periodDaysString));
+                updateCycles(getNewCyclesHistory(Period DiaryodDaysString));
                 props.setIsOpen(false);
               } else {
                 confirmAlert({
